@@ -8,15 +8,15 @@ If you find these examples useful, you can star this repo.
 
 # Bash scripting conventions
 
-| Element                    |Notation              |Example            |Notes                                                                                                                |
-|----------------------------|----------------------|-------------------|---------------------------------------------------------------------------------------------------------------------|
-| Constants                  | SCREAMING_SNAKE_CASE | DEST_PATH         | Use `readonly` or `declare -r` to ensure they are readonly.                                                         |
-| Environment variable names | SCREAMING_SNAKE_CASE | PATH              |                                                                                                                     |
-| File                       | snake_case           | my_script.sh      |                                                                                                                     |
-| Functions                  | snake_case           | do_something(){ } | The keyword `function` it's optional, but must be used consistently troughout a project.[^1]                        |
-| Hashbang                   | #!/usr/bin/env bash  |                   | #!/usr/bin/bash asumes it's always installed in /bin, which can cause issues.                                       |
-| Local variables            | snake_case           | my_local_variable | Ensure that local variables are only seen inside a function and it's children by using `local` when declaring them. |
-| Variables                  | snake_case           | user_name         |                                                                                                                     |
+| Element                    |Notation              |Example            |Notes                                                                                                                    |
+|----------------------------|----------------------|-------------------|-------------------------------------------------------------------------------------------------------------------------|
+| Constants                  | SCREAMING_SNAKE_CASE | DEST_PATH         | Use `readonly` or `declare -r` to ensure they are readonly.                                                             |
+| Environment variable names | SCREAMING_SNAKE_CASE | PATH              |                                                                                                                         |
+| File                       | snake_case           | my_script         | Executables should not have extension (strongly preferred) or a `.sh` extension.[^1]                                    |
+| Functions                  | snake_case           | do_something(){ } | The keyword `function` it's optional, but must be used consistently troughout a project.[^2]                            |
+| Hashbang                   | #!/usr/bin/env bash  |                   | #!/usr/bin/bash asumes it's always installed in /bin, which can cause issues.[^3]                                       |
+| Local variables            | snake_case           | my_local_variable | Ensure that local variables are only seen inside a function and it's children by using `local` when declaring them.     |
+| Variables                  | snake_case           | user_name         |                                                                                                                         |
 
 # Calling commands
 
@@ -61,5 +61,6 @@ Use [ShellCheck](https://github.com/koalaman/shellcheck) to get warnings and sug
 
 * [Google Shell Style Guide](https://google.github.io/styleguide/shellguide.html)
 
-[^1]: The use of the keyword `function`reduces compatibility with older versions of bash.
-
+[^1]: Libraries must have a `.sh`extension and should not be executable.
+[^2]: The use of the keyword `function`reduces compatibility with older versions of bash.
+[^3]: Google does recommend `#!/bin/bash`
