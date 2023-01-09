@@ -9,6 +9,7 @@ If you find these examples useful, you can star this repo.
 # Bash scripting conventions
 
 | Element                    |Notation              |Example            |Notes                                                                                                                |
+|----------------------------|----------------------|-------------------|---------------------------------------------------------------------------------------------------------------------|
 | Constants                  | SCREAMING_SNAKE_CASE | DEST_PATH         | Use `readonly` or `declare -r` to ensure they are readonly.                                                         |
 | Environment variable names | SCREAMING_SNAKE_CASE | PATH              |                                                                                                                     |
 | File                       | snake_case           | my_script.sh      |                                                                                                                     |
