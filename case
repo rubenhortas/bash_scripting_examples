@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+echo "Chose one of the followings:"
+echo "1 - world"
+echo "2 - bruh"
+echo "3 - my friend"
+
+read -r option
+
+case $option in 
+	1) echo "Hello world!";;
+	2) echo "Hello bruh!";;
+	3) echo "Hello my friend!";;
+	*) echo "Goodbye :(";;
+esac
