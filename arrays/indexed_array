@@ -9,6 +9,7 @@ declare -a indexed_array=(
 )
 
 # Assign value
+echo "Assigning value in [0]"
 indexed_array[0]="one"
 
 # Access value
@@ -18,6 +19,7 @@ echo "indexed_array[0] value: ${indexed_array[0]}"
 unset "indexed_array[-1]" # By index
 
 # Add value by index
+echo "Adding value \"four\""
 indexed_array[3]="four"
 
 # Length
@@ -27,18 +29,15 @@ echo "indexed_array has ${#indexed_array[@]} elements" # or ${indexed_array[*]}"
 echo "Last element from indexed_array is: ${indexed_array[${#indexed_array[@]}-1]}"
 
 # Iterating over array
+echo "Array content:"
+# or ${indexed_array[@]}"
 for i in "${indexed_array[@]}"
 do
-	echo "$i"
-done
-
-for i in ${indexed_array[*]}
-do
-	echo "$i"
+	echo -e " \t$i"
 done
 
 # Print all values
-echo "${indexed_array[@]}" # or ${indexed_array[*]}
+echo "Array content: ${indexed_array[@]}" # or ${indexed_array[*]}
 
 # Remove array
 unset indexed_array
