@@ -37,7 +37,8 @@ do
 done
 
 # Print all values
-echo "Array content: ${indexed_array[@]}" # or ${indexed_array[*]}
+# or ${indexed_array[*]}
+echo "${indexed_array[@]}" 
 
 # Remove array
 unset indexed_array
