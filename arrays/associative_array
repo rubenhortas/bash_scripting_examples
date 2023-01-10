@@ -1,0 +1,45 @@
+#!/usr/bin/env bash
+
+# Associative array (key = value)
+declare -A associative_array=(
+	[key5]="five"
+	[key6]="six"
+	[key7]="7"
+	[key72]="72"
+)
+
+# Access value
+associative_array[key7]="seven"
+
+# Remove value
+unset "associative_array[72]"
+
+# Add value by index
+associative_array+=([key8]="eight")
+
+# Associative arrays: Print keys
+echo "${!associative_array[@]}"
+
+# Length
+echo "associative_array has ${#associative_array[@]} elements"_array has ${#associative_array[@]} elements" # or ${associative_array[*]}"
+
+# Iterating over array
+for k in "${!associative_array[@]}"
+do
+	echo "key: $k, value: ${associative_array[${k}]}"
+done
+
+# Print all values
+echo "${associative_array[@]}" # or ${associative_array[*]}
+
+# Check if element is present
+if [[ -n "${associative_array[key8]}" ]] 
+then
+  echo "element exists"
+else
+  echo "element does not exists"
+fi
+
+# Remove array
+unset associative_array
+

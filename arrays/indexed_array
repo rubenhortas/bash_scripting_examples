@@ -1,0 +1,44 @@
+#!/usr/bin/env bash
+
+# Indexed array
+declare -a indexed_array=(
+    "1" 
+    "two"
+    "three"
+    "three"
+)
+
+# Assign value
+indexed_array[0]="one"
+
+# Access value
+echo "indexed_array[0] value: ${indexed_array[0]}"
+
+# Remove value
+unset "indexed_array[-1]" # By index
+
+# Add value by index
+indexed_array[3]="four"
+
+# Length
+echo "indexed_array has ${#indexed_array[@]} elements" # or ${indexed_array[*]}"
+
+# Get the last element
+echo "Last element from indexed_array is: ${indexed_array[${#indexed_array[@]}-1]}"
+
+# Iterating over array
+for i in "${indexed_array[@]}"
+do
+	echo "$i"
+done
+
+for i in ${indexed_array[*]}
+do
+	echo "$i"
+done
+
+# Print all values
+echo "${indexed_array[@]}" # or ${indexed_array[*]}
+
+# Remove array
+unset indexed_array
