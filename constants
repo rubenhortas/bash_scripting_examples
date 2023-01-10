@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+declare -r YEAR_MONTHS=12
+
+echo "A year has $YEAR_MONTHS months"
