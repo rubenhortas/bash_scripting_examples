@@ -30,15 +30,13 @@ echo "Last element from indexed_array is: ${indexed_array[${#indexed_array[@]}-1
 
 # Iterating over array
 echo "Array content:"
-# or ${indexed_array[@]}"
-for i in "${indexed_array[@]}"
+for i in "${indexed_array[@]}" # or ${indexed_array[@]}"
 do
 	echo -e " \t$i"
 done
 
 # Print all values
-# or ${indexed_array[*]}
-echo "${indexed_array[@]}" 
+echo "${indexed_array[@]}" # or ${indexed_array[*]}
 
 # Remove array
 unset indexed_array

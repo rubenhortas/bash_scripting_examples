@@ -13,10 +13,10 @@ echo "Assigning value \"seven\" to key7"
 associative_array[key7]="seven"
 
 # Remove value
-echo "Revoving key[72]"
+echo "Removing key[72]"
 unset "associative_array[key72]"
 
-# Add value by indexi
+# Add value by index
 echo "Adding [key8]=\"eight\""
 associative_array+=([key8]="eight")
 
@@ -25,8 +25,7 @@ echo "Array keys:"
 echo "${!associative_array[@]}"
 
 # Length
-# or ${associative_array[*]}"
-echo "associative_array has ${#associative_array[@]} elements" 
+echo "associative_array has ${#associative_array[@]} elements" # or ${associative_array[*]}"
 
 # Iterating over array
 echo "Array content:"
@@ -36,8 +35,7 @@ do
 done
 
 # Print all values
-# or ${associative_array[*]}
-echo "${associative_array[@]}"
+echo "${associative_array[@]}" # or ${associative_array[*]}
 
 # Check if element is present
 if [[ -n "${associative_array[key8]}" ]] 
