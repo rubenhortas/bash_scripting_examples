@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 write_hello_world() {
-	echo "Hello world!"
+	echo "$1 $2"
 }
 
 # Function call
-write_hello_world
+write_hello_world "Hello" "world!"
