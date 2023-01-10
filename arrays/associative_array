@@ -9,35 +9,42 @@ declare -A associative_array=(
 )
 
 # Access value
+echo "Assigning value \"seven\" to key7"
 associative_array[key7]="seven"
 
 # Remove value
-unset "associative_array[72]"
+echo "Revoving key[72]"
+unset "associative_array[key72]"
 
-# Add value by index
+# Add value by indexi
+echo "Adding [key8]=\"eight\""
 associative_array+=([key8]="eight")
 
 # Associative arrays: Print keys
+echo "Array keys:"
 echo "${!associative_array[@]}"
 
 # Length
-echo "associative_array has ${#associative_array[@]} elements"_array has ${#associative_array[@]} elements" # or ${associative_array[*]}"
+# or ${associative_array[*]}"
+echo "associative_array has ${#associative_array[@]} elements" 
 
 # Iterating over array
+echo "Array content:"
 for k in "${!associative_array[@]}"
 do
-	echo "key: $k, value: ${associative_array[${k}]}"
+	echo -e " \tkey: $k, value: ${associative_array[${k}]}"
 done
 
 # Print all values
-echo "${associative_array[@]}" # or ${associative_array[*]}
+# or ${associative_array[*]}
+echo "${associative_array[@]}"
 
 # Check if element is present
 if [[ -n "${associative_array[key8]}" ]] 
 then
-  echo "element exists"
+  echo "key8 exists"
 else
-  echo "element does not exists"
+  echo "key8 does not exists"
 fi
 
 # Remove array
