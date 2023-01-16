@@ -20,7 +20,7 @@ unset "associative_array[key72]"
 echo "Adding [key8]=\"eight\""
 associative_array+=([key8]="eight")
 
-# Associative arrays: Print keys
+# Print keys
 echo "Array keys:"
 echo "${!associative_array[@]}"
 
