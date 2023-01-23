@@ -18,7 +18,7 @@ If you find these examples useful, you can star this repo.
 | Local variables            | snake_case           | my_local_variable | Ensure that local variables are only seen inside a function and it's children by using `local` when declaring them.     |
 | Variables                  | snake_case           | user_name         |                                                                                                                         |
 
-# Calling commands
+# Command calls
 
 ## Check  return values
 
