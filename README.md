@@ -18,6 +18,22 @@ If you find these examples useful, you can star this repo.
 | Local variables            | snake_case           | my_local_variable | Ensure that local variables are only seen inside a function and it's children by using `local` when declaring them.     |
 | Variables                  | snake_case           | user_name         |                                                                                                                         |
 
+# Declare
+
+* -f -> Declare a function.
+* -F -> Display the function name and attributes.
+* -g -> Global scope.
+* -p -> Display options and attributes of variables.
+* -a -> Indexed array.
+* -A -> Associative array.
+* -i -> Integer (unset with +i).
+* -l -> Lowercase characters only (unset with +l).
+* -n -> The variable is a name reference to other variable (unset with +n).
+* -r -> Read only (unset with +r)
+* -t -> The item inherits DEBUG and RETURN traps from the parent shell (unset with +t).
+* -u -> Uppercase characters only (unset with +u).
+* -x -> Exports the variable to child processes (unset with +x)
+
 # Command calls
 
 ## Check  return values
