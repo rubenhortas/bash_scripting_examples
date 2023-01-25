@@ -1,5 +1,21 @@
 #!/usr/bin/env bash
 
+# Declare
+#
+#  -g -> Global scope.
+#  -p -> Display options and attributes of variables.
+#  -a -> Indexed array.
+#  -A -> Associative array.
+#
+#  Set with '-', unset with '+'
+#  -|+i -> Integer.
+#  -|+l -> Lowercase characters only.
+#  -|+n -> The variable is a name reference to other variable.
+#  -|+r -> Read only.
+#  -|+t -> The item inherits DEBUG and RETURN traps from the parent shell.
+#  -|+u -> Uppercase characters only.
+#  -|+x -> Exports the variable to child processes.
+
 var="world"
 
 echo "Hello $var!"

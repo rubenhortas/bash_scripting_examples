@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+# Declare
+#
+# -f -> Declare a function.
+# -F -> Display the function name and attributes.
+
 write_hello_world() {
 	echo "$1 $2"
 }
