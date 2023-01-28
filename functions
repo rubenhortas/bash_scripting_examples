@@ -4,5 +4,13 @@ write_hello_world() {
 	echo "$1 $2"
 }
 
-# Function call
+return_value() {
+	echo "returned value"
+}
+ 
+# Function call with parameters
 write_hello_world "Hello" "world!"
+
+# Returning a value from a function
+value=return_value
+echo "Value is: $value"
