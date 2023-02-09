@@ -2,10 +2,6 @@
 
 Small examples of bash scripting.
 
-# Support
-
-If you find these examples useful, you can star this repo.
-
 # Bash scripting conventions
 
 | Element                    |Notation              |Example            |Notes                                                                                                                    |
@@ -64,3 +60,7 @@ Use [ShellCheck](https://github.com/koalaman/shellcheck) to get warnings and sug
 [^1]: Libraries must have a `.sh`extension and should not be executable.
 [^2]: The use of the keyword `function`reduces compatibility with older versions of bash.
 [^3]: Google does recommend `#!/bin/bash`
+
+# Support
+
+If you find these examples useful, you can star this repo.
