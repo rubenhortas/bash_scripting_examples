@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
 # Declare
-#
 # -f -> Declare a function.
 # -F -> Display the function name and attributes.
 
@@ -9,13 +8,23 @@ write_hello_world() {
 	echo "$1 $2"
 }
 
-return_value() {
-	echo "returned value"
+return_global_value() {
+	# Since all variables in bash are global by default we can just set a global variable
+	global_value="some global value"
 }
- 
+
+return_local_value(){
+	# A better approach is to use local variables
+	local_value="some local value"
+	echo "$local_value"
+}
+
 # Function call with parameters
 write_hello_world "Hello" "world!"
 
 # Returning a value from a function
-value=return_value
-echo "Value is: $value"
+return_global_value
+echo "global value is: $global_value"
+
+value=$(return_local_value)
+echo "returned value is: $value"

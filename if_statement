@@ -3,9 +3,11 @@
 echo -n "Enter a number: "
 read -r number
 
-if [ "$number" -lt 100 ]; then
+if [ "$number" -lt 100 ]
+then
 	echo "$number < 100"
 else
+	# We also can write if then in the same line
 	if [ "$number" -eq 100 ]; then
 		echo "$number = 100"
 	else
