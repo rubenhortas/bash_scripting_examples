@@ -13,6 +13,14 @@ Small examples of bash scripting.
 | Hashbang                   |                      | #!/usr/bin/env bash | #!/usr/bin/bash asumes it's always installed in /bin, which can cause issues.[^3]                                       |
 | Local variables            | snake_case           | my_local_variable   | Ensure that local variables are only seen inside a function and it's children by using `local` when declaring them.     |
 | Variables                  | snake_case           | user_name           |                                                                                                                         |
+## Multiline comments
+
+```bash
+: '
+   line1
+   line2
+'
+```
 
 ## Command calls
 

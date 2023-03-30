@@ -1,6 +1,12 @@
 #!/usr/bin/env bash
 
-for i in {1..5}
+for i in {1..50}
 do
-  echo "$i"
+	if [ $i -eq 15 ]
+	then
+		echo "$i"
+		break
+	fi
 done
+
+echo "done"

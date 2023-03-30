@@ -1,14 +1,56 @@
 #!/usr/bin/env bash
 
-#Operators
+declare -r FOO="foo"
+declare -r BAR="bar"
+declare -r LOWERCASE_STRING="hello world!"
+declare -r UPPERCASE_STRING="HELLO WORLD!"
+
+# Comparison Operators
 # == Returns true if strings are equal
 # != Returns true if strings are not equal
 # -n Returns true if the string to be tested is not null
 # -z Returns true if the string to be tested is null
 
-if [ "example" == "example" ]
+if [ '$FOO' == '$BAR' ]
 then
-	echo "Strings are equal"
+	echo "'$FOO' is equal to '$BAR'"
 else
-	echo "Strings aren't equal"
+	echo "'$FOO' isn't equal to '$BAR'"
 fi
+
+if [ '$FOO' \< '$BAR' ]
+then
+	echo "'$FOO' is shorter than '$BAR'"
+else
+	echo "'$FOO' is equal or longer than '$BAR'"
+fi
+
+if [ '$FOO' \> '$BAR' ]
+then
+	echo "'$FOO' is longer than '$BAR'"
+else
+	echo "'$FOO' is equal or shorter than '$BAR'"
+fi
+
+# String transformations
+# Lowercase
+echo
+echo "'$UPPERCASE_STRING' to lowercase:"
+echo "${UPPERCASE_STRING,}" # hELLO WORLD
+echo "${UPPERCASE_STRING,,}" # hello world!
+echo "${UPPERCASE_STRING,,[AEIOU]}" # HeLLo WoRLD!
+
+declare -l lwr_str=$UPPERCASE_STRING
+echo $lwr_str # hello world!
+
+# Uppercase
+echo
+echo "'$LOWERCASE_STRING' to uppercase:"
+echo "${LOWERCASE_STRING^}" # Hello world!
+echo "${LOWERCASE_STRING^^}" # HELLO WORLD!
+echo "${LOWERCASE_STRING^^[aeiou]}" # hEllO wOrld!
+
+declare -u upr_str=$LOWERCASE_STRING
+echo $upr_str # HELLO WORLD!
+
+

@@ -22,6 +22,9 @@ unset "indexed_array[-1]" # By index
 echo "Adding value \"four\""
 indexed_array[3]="four"
 
+# Show indexes
+echo "indexes: ${!indexed_array[@]}"
+
 # Length
 echo "indexed_array has ${#indexed_array[@]} elements" # or ${indexed_array[*]}"
 
