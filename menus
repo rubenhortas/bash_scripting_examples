@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+select op in FOO BAR
+do
+   case $op in
+      FOO)
+         echo "FOO selected"
+         break;;
+      BAR)
+         echo "BAR selected"
+         break;;
+      *)
+         echo "Error selected"
+         break;;
+   esac
+done
