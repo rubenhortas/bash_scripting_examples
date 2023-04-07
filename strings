@@ -11,21 +11,21 @@ declare -r UPPERCASE_STRING="HELLO WORLD!"
 # -n Returns true if the string to be tested is not null
 # -z Returns true if the string to be tested is null
 
-if [ '$FOO' == '$BAR' ]
+if [ $FOO == $BAR ]
 then
 	echo "'$FOO' is equal to '$BAR'"
 else
 	echo "'$FOO' isn't equal to '$BAR'"
 fi
 
-if [ '$FOO' \< '$BAR' ]
+if [ $FOO \< $BAR ]
 then
 	echo "'$FOO' is shorter than '$BAR'"
 else
 	echo "'$FOO' is equal or longer than '$BAR'"
 fi
 
-if [ '$FOO' \> '$BAR' ]
+if [ $FOO \> $BAR ]
 then
 	echo "'$FOO' is longer than '$BAR'"
 else
@@ -41,7 +41,7 @@ echo "${UPPERCASE_STRING,,}" # hello world!
 echo "${UPPERCASE_STRING,,[AEIOU]}" # HeLLo WoRLD!
 
 declare -l lwr_str=$UPPERCASE_STRING
-echo $lwr_str # hello world!
+echo "$lwr_str" # hello world!
 
 # Uppercase
 echo
@@ -51,6 +51,6 @@ echo "${LOWERCASE_STRING^^}" # HELLO WORLD!
 echo "${LOWERCASE_STRING^^[aeiou]}" # hEllO wOrld!
 
 declare -u upr_str=$LOWERCASE_STRING
-echo $upr_str # HELLO WORLD!
+echo "$upr_str" # HELLO WORLD!
 
 
