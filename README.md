@@ -44,7 +44,7 @@ set -x
 
 echo "Code block"
 
-set -x
+set +x
 ```
 
 ## Command calls
