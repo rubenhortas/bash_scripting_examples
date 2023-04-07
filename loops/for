@@ -2,7 +2,7 @@
 
 for i in {1..50}
 do
-	if [ $i -eq 15 ]
+	if [ "$i" -eq 15 ]
 	then
 		echo "$i"
 		break
