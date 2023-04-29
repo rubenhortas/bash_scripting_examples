@@ -2,7 +2,7 @@
 
 Small examples of bash scripting.
 
-## Bash scripting conventions
+## Bash scripting naming conventions
 
 | Element                    |Notation              |Example              |Notes                                                                                                                    |
 |----------------------------|----------------------|---------------------|-------------------------------------------------------------------------------------------------------------------------|
