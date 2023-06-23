@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+directory="arrays"
+file="menus"
+
+if [ -d "$directory" ]
+then
+	echo "$directory exists!"
+else
+	echo "$directory doesn't exist"
+fi
+
+if [ -f "$file" ]
+then
+	echo "$file exists!"
+else
+	echo "$file doesn't exist"
+fi
