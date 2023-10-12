@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 
-directory="arrays"
-file="menus"
+directory="foo"
+file="bar"
 
+# Check if directory exists
 if [ -d "$directory" ]
 then
 	echo "$directory exists!"
@@ -10,9 +11,18 @@ else
 	echo "$directory doesn't exist"
 fi
 
+# Check if file exists
 if [ -f "$file" ]
 then
 	echo "$file exists!"
 else
 	echo "$file doesn't exist"
+fi
+
+# Check if file is empty
+if [ -s "$file" ]
+then
+	echo "$file contains data"
+else
+	echo "$file is empty"
 fi

@@ -47,4 +47,3 @@ fi
 
 # Remove array
 unset associative_array
-

@@ -5,7 +5,7 @@ declare -r BAR="bar"
 declare -r LOWERCASE_STRING="hello world!"
 declare -r UPPERCASE_STRING="HELLO WORLD!"
 
-# Comparison Operators
+# Comparison Operators:
 # == Returns true if strings are equal
 # != Returns true if strings are not equal
 # -n Returns true if the string to be tested is not null
@@ -52,5 +52,3 @@ echo "${LOWERCASE_STRING^^[aeiou]}" # hEllO wOrld!
 
 declare -u upr_str=$LOWERCASE_STRING
 echo "$upr_str" # HELLO WORLD!
-
-
