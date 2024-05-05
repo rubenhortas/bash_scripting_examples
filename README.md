@@ -51,7 +51,7 @@ set +x
 
 ### Check  return values
 
-Always check return valuies and give informative return values.
+Always check return values and give informative return values.
 For unpiped commands use `$?` or check directly via an `if` statement.
 
 ```shell
