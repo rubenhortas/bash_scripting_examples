@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+BEST_HACKERS="0G_h4x0r2"
+
+# \""  to escape quotes
+# \""" to prvent gobbling and word splitting
+echo "\"""$BEST_HACKERS\""" are the best hackers in the \"" w0r1d \""!"
