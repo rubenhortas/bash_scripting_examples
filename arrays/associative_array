@@ -55,5 +55,24 @@ else
 fi
 # return: key8 exists
 
+# Passing as function argument (Bash 4.3 or newer)
+function do_something() {
+    local -n tmp_array=$1
+
+    for key in "${!tmp_array[@]}"
+    do
+       echo "Do something with $key:${tmp_array[${key}]}"
+    done
+}
+
+do_something associative_array
+# return:
+#   Do something with key6:six
+#   Do something with key7:seven
+#   Do something with key5:five
+#   Do something with key8:eight
+
 # Remove array
 unset associative_array
+
+
