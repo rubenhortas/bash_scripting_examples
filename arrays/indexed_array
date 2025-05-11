@@ -2,7 +2,7 @@
 
 # Indexed array
 declare -a indexed_array=(
-    "1" 
+    "1"
     "two"
     "three"
     "three"
@@ -14,6 +14,7 @@ indexed_array[0]="one"
 
 # Access value
 echo "indexed_array[0] value: ${indexed_array[0]}"
+# result: indexed_array[0] value: one
 
 # Remove value
 unset "indexed_array[-1]" # By index
@@ -24,12 +25,15 @@ indexed_array[3]="four"
 
 # Show indexes
 echo "indexes: ${!indexed_array[*]}"
+# result: indexes: 0 1 2 3
 
 # Length
 echo "indexed_array has ${#indexed_array[@]} elements" # or ${indexed_array[*]}"
+# result: indexed_array has 4 elements
 
 # Get the last element
 echo "Last element from indexed_array is: ${indexed_array[${#indexed_array[@]}-1]}"
+# result: Last element from indexed_array is: four
 
 # Iterating over array
 echo "Array content:"
@@ -37,9 +41,33 @@ for i in "${indexed_array[@]}" # or ${indexed_array[@]}"
 do
 	echo -e " \t$i"
 done
+# result:
+#   Array content:
+#           one
+#           two
+#           three
+#           four
 
 # Print all values
 echo "${indexed_array[@]}" # or ${indexed_array[*]}
+# result: one two three four
+
+# Passing as a function argument (Bash 4.3 or newer)
+function do_something(){
+    local -n tmp_array=$1
+
+    for i in "${tmp_array[@]}"
+    do
+        echo "Do something with $i"
+    done
+}
+
+do_something indexed_array
+# result:
+#   Do something with one
+#   Do something with two
+#   Do something with three
+#   Do something with four
 
 # Remove array
 unset indexed_array
