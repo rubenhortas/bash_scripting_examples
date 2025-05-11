@@ -23,9 +23,11 @@ associative_array+=([key8]="eight")
 # Print keys
 echo "Array keys:"
 echo "${!associative_array[@]}"
+# return: key6 key7 key5 key8
 
 # Length
 echo "associative_array has ${#associative_array[@]} elements" # or ${associative_array[*]}"
+# return: associative_array has 4 elements
 
 # Iterating over array
 echo "Array content:"
@@ -33,9 +35,16 @@ for k in "${!associative_array[@]}"
 do
 	echo -e " \tkey: $k, value: ${associative_array[${k}]}"
 done
+# return:
+#   Array content:
+#           key: key6, value: six
+#           key: key7, value: seven
+#           key: key5, value: five
+#           key: key8, value: eight
 
 # Print all values
 echo "${associative_array[@]}" # or ${associative_array[*]}
+# return: six seven five eight
 
 # Check if element is present
 if [ -n "${associative_array[key8]}" ]
@@ -44,6 +53,7 @@ then
 else
   echo "key8 does not exists"
 fi
+# return: key8 exists
 
 # Remove array
 unset associative_array
