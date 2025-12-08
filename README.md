@@ -8,7 +8,7 @@ Small examples of bash scripting.
 
 ![GitHub](https://img.shields.io/github/license/rubenhortas/bash_scripting_examples)
 
-## Bash scripting naming conventions
+## :bokmark: Bash scripting naming conventions
 
 | Element                    |Notation              |Example              |Notes                                                                                                                    |
 |----------------------------|----------------------|---------------------|-------------------------------------------------------------------------------------------------------------------------|
@@ -29,7 +29,7 @@ Small examples of bash scripting.
 '
 ```
 
-## Debug
+## :bug: Debug
 
 ### Executing
 
@@ -53,7 +53,7 @@ echo "Code block"
 set +x
 ```
 
-## Command calls
+## :telephone_receiver: Command calls
 
 ### Check  return values
 
@@ -88,7 +88,7 @@ addition="$(expr "${X}" + "${Y}")"
 substitution="$(echo "${string}" | sed -e 's/^foo/bar/')"
 ```
 
-## Static analysis
+## :mag_right: Static analysis
 
 Use [ShellCheck](https://github.com/koalaman/shellcheck) to get warnings and suggestions for your scripts.
 
