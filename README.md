@@ -8,7 +8,7 @@ Small examples of bash scripting.
 
 ![GitHub](https://img.shields.io/github/license/rubenhortas/bash_scripting_examples)
 
-## :bokmark: Bash scripting naming conventions
+## :bookmark: Bash scripting naming conventions
 
 | Element                    |Notation              |Example              |Notes                                                                                                                    |
 |----------------------------|----------------------|---------------------|-------------------------------------------------------------------------------------------------------------------------|
