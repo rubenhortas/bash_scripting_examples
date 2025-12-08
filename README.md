@@ -2,6 +2,12 @@
 
 Small examples of bash scripting.
 
+![GitHub repo file count](https://img.shields.io/github/directory-file-count/rubenhortas/bash_scripting_examples)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/rubenhortas/bash_scripting_examples)
+![GitHub repo size](https://img.shields.io/github/repo-size/rubenhortas/bash_scripting_examples)
+
+![GitHub](https://img.shields.io/github/license/rubenhortas/bash_scripting_examples)
+
 ## Bash scripting naming conventions
 
 | Element                    |Notation              |Example              |Notes                                                                                                                    |
@@ -86,7 +92,7 @@ substitution="$(echo "${string}" | sed -e 's/^foo/bar/')"
 
 Use [ShellCheck](https://github.com/koalaman/shellcheck) to get warnings and suggestions for your scripts.
 
-## Sources
+## :books: Sources
 
 * [Google Shell Style Guide](https://google.github.io/styleguide/shellguide.html)
 
@@ -94,6 +100,6 @@ Use [ShellCheck](https://github.com/koalaman/shellcheck) to get warnings and sug
 [^2]: The use of the keyword `function`reduces compatibility with older versions of bash.
 [^3]: Google does recommend `#!/bin/bash`
 
-## Support
+## :star: Support
 
-If you find these examples useful, you can star this repo.
+If you find these examples useful, please, consider starring this repository!
