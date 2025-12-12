@@ -2,7 +2,6 @@
 
 Small examples of bash scripting.
 
-![GitHub repo file count](https://img.shields.io/github/directory-file-count/rubenhortas/bash_scripting_examples)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/rubenhortas/bash_scripting_examples)
 ![GitHub repo size](https://img.shields.io/github/repo-size/rubenhortas/bash_scripting_examples)
 
