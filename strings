@@ -11,6 +11,13 @@ declare -r UPPERCASE_STRING="HELLO WORLD!"
 # -n Returns true if the string to be tested is not null
 # -z Returns true if the string to be tested is null
 
+if [ $FOO == "foo" ]
+then
+    echo "'$FOO' is  equal to 'foo'"
+else
+    echo "'$FOO' isn't equal to 'foo'"
+fi
+
 if [ $FOO == $BAR ]
 then
 	echo "'$FOO' is equal to '$BAR'"
