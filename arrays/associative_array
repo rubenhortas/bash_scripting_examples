@@ -42,6 +42,23 @@ done
 #           key: key5, value: five
 #           key: key8, value: eight
 
+# namerefs
+# The `namerefs` feature (name references) was introduced in Bash 4.3
+# It allows to create a variable that acts as an alias or pointer to another variable.
+# It is extremely useful for cleaning up your code.
+echo "Array content (namerefs):"
+for k in "${!associative_array[@]}"
+do
+    declare -n current_key="associative_array[$k]"
+    echo -e " \tkey: $k, value: $current_key"
+done
+#return:
+#  Array content (namerefs):
+#          key: key6, value: six
+#          key: key7, value: seven
+#          key: key5, value: five
+#          key: key8, value: eight
+
 # Print all values
 echo "${associative_array[@]}" # or ${associative_array[*]}
 # return: six seven five eight
